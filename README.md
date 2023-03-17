@@ -10,3 +10,7 @@ with the extra process of this comment for the INI file to fix "Listener not lis
 https://github.com/stascorp/rdpwrap/issues/999#issuecomment-668673903
 [[ basically copied to program files\rdp wrapper this:
 https://raw.githubusercontent.com/affinityv/INI-RDPWRAP/master/rdpwrap.ini ]]
+
+to add Group Policy in CMD
+FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~*.mum") DO ( DISM /Online /NoRestart /Add-Package:"%F" )
+FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~*.mum") DO ( DISM /Online /NoRestart /Add-Package:"%F" )
