@@ -8,8 +8,13 @@ follow these steps here
 https://github.com/stascorp/rdpwrap/issues/999#issuecomment-605368605
 with the extra process of this comment for the INI file to fix "Listener not listening"
 https://github.com/stascorp/rdpwrap/issues/999#issuecomment-668673903
+
 [[ basically copied to program files\rdp wrapper this:
 https://raw.githubusercontent.com/affinityv/INI-RDPWRAP/master/rdpwrap.ini ]]
+- to stop service:
+-   net stop termservice
+- replace INI
+-   net start termservice
 
 to add Group Policy in CMD:
 
