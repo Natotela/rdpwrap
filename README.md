@@ -4,20 +4,22 @@ copy to folder, run as admin, and change the ini file.
 this is all taken after looking in ISSUES of RDPwrapper
 
 socket connection failed?
-follow these steps here
-https://github.com/stascorp/rdpwrap/issues/999#issuecomment-605368605
-with the extra process of this comment for the INI file to fix "Listener not listening"
+follow these steps here https://github.com/stascorp/rdpwrap/issues/999#issuecomment-605368605
+
+with the extra process of this comment for the INI file to fix
+"Listener not listening"
 https://github.com/stascorp/rdpwrap/issues/999#issuecomment-668673903
 
 [[ basically copied to program files\rdp wrapper this:
 https://raw.githubusercontent.com/affinityv/INI-RDPWRAP/master/rdpwrap.ini ]]
-- to stop service:
--   net stop termservice
-- replace INI
--   net start termservice
 
 to add Group Policy in CMD:
 
 FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~*.mum") DO ( DISM /Online /NoRestart /Add-Package:"%F" )
 
 FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~*.mum") DO ( DISM /Online /NoRestart /Add-Package:"%F" )
+
+** UPDATING: ** 
+- net stop termservice
+- replace INI
+- net start termservice
